@@ -342,9 +342,7 @@ register_activation_hook(__FILE__, function () {
 
  add_action('wp_head',function()
  {
-    echo '<script type="text/javascript">
-    var ajaxwoocommerceurl = "' .admin_url("admin-ajax.php") .'";
-  </script>';
+
     wp_enqueue_style(
         'activitystyle',
         plugins_url('/includes/activitystreamtypes.css', __FILE__)
