@@ -336,6 +336,9 @@ register_activation_hook(__FILE__, function () {
     }
 });
 
+include_once plugin_dir_path(__FILE__) . 'deploy/updater.php';
+wpme_gravity_forms_updater_init(__FILE__);
+
 /**
  * Plugin loaded
  */
