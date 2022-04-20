@@ -415,9 +415,7 @@ add_action(
                             }
                         }
                     }
-                    echo '<script type="text/javascript">
-                    var ajaxwoocommerceurl = "' .admin_url("admin-ajax.php") .'";
-                  </script>';
+                
                     wp_enqueue_style(
                         'activitystyle',
                         plugins_url('/includes/activitystreamtypes.css', __FILE__)
@@ -3856,6 +3854,9 @@ function woocommerce_delete_plugin_options()
        {
          ?>
        <div class="notice notice-success is-dismissible woo-extension-notification">
+             <input type="hidden" class="admininsertvalue" value="<?php echo admin_url(
+                            'admin-ajax.php'
+                        ); ?>" />
               <span><p><b>WooCommerce - WPMktgEngine | Genoo Extension update required</b></p> <p>WooCommerce extension has been updated. Update the woocommerce extension activity stream types.</p></span>
            <span class="action-button-area">
        <a class="clickoption button button-primary">Update Database</a>
