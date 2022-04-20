@@ -72,12 +72,22 @@
                display: table;
               }
 
-
- .woo-extension-notification .notice-dismiss {
+   .woo-extension-notification span:first-child {
+       float: left;
+       width: calc(100% - 100px);
+       margin-top: 5px;
+   }
+   .woo-extension-notification .notice-dismiss {
        display: none !important;
    } 
-
-  .woo-extension-notification {
+   span.action-button-area {
+       float: right;
+       width: 100px;
+       text-align: right;
+       margin-top: 13px;
+   }
+   
+   	  .woo-extension-notification {
     float: left;
     width: 96%;
 }
