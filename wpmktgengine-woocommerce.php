@@ -340,20 +340,6 @@ register_activation_hook(__FILE__, function () {
  * Plugin loaded
  */
 
- add_action('wp_head',function()
- {
-
-    wp_enqueue_style(
-        'activitystyle',
-        plugins_url('/includes/activitystreamtypes.css', __FILE__)
-    );
-
-    wp_enqueue_script(
-        'activity-script',
-        plugins_url('/includes/activitystream.js', __FILE__, [], '1.0.0', true)
-    );
- });
-
 add_action(
     'wpmktengine_init',
     function ($repositarySettings, $api, $cache) {
@@ -415,6 +401,16 @@ add_action(
                             }
                         }
                     }
+                
+                    wp_enqueue_style(
+                        'activitystyle',
+                        plugins_url('/includes/activitystreamtypes.css', __FILE__)
+                    );
+                
+                    wp_enqueue_script(
+                        'activity-script',
+                        plugins_url('/includes/activitystream.js', __FILE__, [], '1.0.0', true)
+                    );
                 },
                 10,
                 1
