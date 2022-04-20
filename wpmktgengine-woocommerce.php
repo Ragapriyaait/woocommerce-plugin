@@ -415,16 +415,6 @@ add_action(
                             }
                         }
                     }
-                
-                    wp_enqueue_style(
-                        'activitystyle',
-                        plugins_url('/includes/activitystreamtypes.css', __FILE__)
-                    );
-                
-                    wp_enqueue_script(
-                        'activity-script',
-                        plugins_url('/includes/activitystream.js', __FILE__, [], '1.0.0', true)
-                    );
                 },
                 10,
                 1
